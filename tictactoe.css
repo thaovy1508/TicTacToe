@@ -1,0 +1,98 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color:black;
+  font-size: 20px;
+}
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(105, 82, 82);
+}
+:root {
+  --size: 100px;
+  --mark: calc(var(--size) * 0.45);
+}
+table {
+  margin: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+}
+td {
+  border: 3px solid rgb(151, 109, 4);
+  box-shadow: 0px 0px 1px 1px gainsboro;
+  width: var(--size);
+  height: var(--size);
+  text-align: center;
+  font-size: var(--mark);
+}
+td:nth-child(1) {
+  border-left: none;
+}
+td:nth-child(3) {
+  border-right: none;
+}
+td:nth-child(1n) {
+  border-top: none;
+}
+tr:nth-child(3) td {
+  border-bottom: none;
+}
+
+.modal {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  height: 0;
+  z-index: 1;
+  left: 0;
+  transition: all 0.9s;
+  overflow: hidden;
+  transform: translateY(50%);
+  bottom: 0;
+}
+
+p {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 100px;
+}
+
+button {
+  margin: auto;
+  width: var(--size);
+  height: 0;
+  border-radius: 22px;
+  border: 0;
+  outline-width: 0;
+  cursor: pointer;
+  font-weight: 800;
+  background-color: indigo;
+  color: white;
+  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: ease-in-out 0.5s;
+  overflow: hidden;
+  padding: 0;
+}
+
+button:hover {
+  background-color: greenyellow;
+  color: black;
+}
